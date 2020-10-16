@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int r,i,P1,P2,cum1=0,cum2=0,max_lead1=0,max_lead2=0,lead1=0,lead2=0;
+    cin >> r;
+    for(i=0;i<r;i++)
+    {
+        
+        cin>>P1>>P2;
+        cum1+=P1;
+        cum2+=P2;
+        if (cum1>=cum2)
+        {  
+            lead1= cum1-cum2;
+        }
+        else
+        {
+           lead2=cum2-cum1;
+        }
+        if(max_lead1<lead1)
+        {
+            max_lead1=lead1;
+        }
+        if(max_lead2<lead2)
+        {
+            max_lead2=lead2;
+        }
+        
+    }
+    
+    if(max_lead1>max_lead2)
+    {
+        cout<<"1"<<" "<<max_lead1;
+        
+    }
+    if(max_lead1<max_lead2)
+    {
+        cout<<"2"<<" "<<max_lead2;
+      
+
+    }
+}
